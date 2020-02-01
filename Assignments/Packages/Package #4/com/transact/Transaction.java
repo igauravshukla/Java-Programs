@@ -1,19 +1,22 @@
 package JAVA.ASS3.SETB.com.transact;
+
 import java.util.Scanner;
 
 public class Transaction
 {
-	static Scanner sc=new Scanner(System.in);
-	public static double credit(double amt)
+	Scanner sc = new Scanner(System.in);
+
+	public double credit(double amt)
 	{
 		System.out.print("Enter amount to be credited : ");
-		double camt=sc.nextDouble();
-		return amt+camt;
+		double camt = sc.nextDouble();
+		return amt += camt;
 	}
-	public static double debit(double amt)
+
+	public double debit(double amt)
 	{
 		System.out.print("Enter amount to be debited : ");
-		double damt=sc.nextDouble();
+		double damt = sc.nextDouble();
 		while(true)
 		{
 			if((amt-damt)<1000)
@@ -22,7 +25,7 @@ public class Transaction
 				return amt;
 			}
 			else
-				return amt-damt;
+				return amt -= damt;
 		}
 	}
 }
