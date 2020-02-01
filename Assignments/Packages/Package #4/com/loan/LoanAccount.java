@@ -4,24 +4,29 @@ Create a package named com. Define subpackages; transact: with class Transaction
 
 */
 
-import JAVA.ASS3.SETB.com.transact.*;
+import GitHub.Java-Programs.Assignments.Packages.Package #4.com.transact.*;
+
 import java.util.Scanner;
 
 class LoanAccount
 {
 	int id;
 	String name;
-	static double amount;
+	double amount;
+	Transaction t1;
+
 	LoanAccount(int id,String name,double amount)
 	{
-		this.id=id;
-		this.name=name;
-		this.amount=amount;
+		this.id = id;
+		this.name = name;
+		this.amount = amount;
+		t1 = new Transaction();
 	}
+
 	void doTransaction()
 	{
 		int ch;
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		do
 		{
 			System.out.println("\n***********MENU***********");
@@ -29,13 +34,13 @@ class LoanAccount
 			System.out.println("2. Debit Amount");
 			System.out.println("3. Request to End the Transaction");
 			System.out.print("\nSelect The option: ");
-			ch=sc.nextInt();
+			ch = sc.nextInt();
 			switch(ch)
 			{
-				case 1:	amount=Transaction.credit(amount);
+				case 1:	amount = t1.credit(amount);
 						System.out.println("Your current balance is "+amount);
 						break;
-				case 2:	amount=Transaction.debit(amount);
+				case 2:	amount = t1.debit(amount);
 						System.out.println("Your current balance is "+amount);
 						break;
 				case 3:	System.out.println("Request Accepted to end the transaction");
@@ -44,11 +49,12 @@ class LoanAccount
 			}
 		}while(ch!=3);
 	}
+
 	public static void main(String args[])
 	{
-		int id=Integer.parseInt(args[0]);
-		double amount=Double.parseDouble(args[2]);
-		LoanAccount la=new LoanAccount(id,args[1],amount);
+		int id = Integer.parseInt(args[0]);
+		double amount = Double.parseDouble(args[2]);
+		LoanAccount la = new LoanAccount(id,args[1],amount);
 		la.doTransaction();
 	}
 }
