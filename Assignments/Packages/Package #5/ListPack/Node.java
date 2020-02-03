@@ -10,11 +10,11 @@ public class Node
 {
      public static void main(String[] args) throws IOException
      {
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n,ch;
-		System.out.print("Number of nodes: ");
+		System.out.print("\nNumber of nodes : ");
 		n = Integer.parseInt(br.readLine());
-		System.out.println("Enter data for nodes:");
+		System.out.println("Enter data for nodes :");
 		String node[] = new String[n];
 		for(int i=0;i<n;i++)
 			node[i] = br.readLine();
@@ -27,16 +27,16 @@ public class Node
 			switch(ch)
 			{
 				case 1:	SLL sll = new SLL();
-                              sll.single(n,node);
-                              break;
+                              	sll.single(n,node);
+                              	break;
 
 				case 2:	DLL dll = new DLL();
-                              dll.doubly(n,node);
-                              break;
+                              	dll.doubly(n,node);
+                              	break;
 
 				case 3:	CLL cll = new CLL();
-                              cll.circular(n,node);
-                              break;
+                              	cll.circular(n,node);
+                              	break;
 
 				case 4:	System.exit(0);
 			}
@@ -47,12 +47,17 @@ public class Node
 /*
 
 $ javac SLL.java
+
 $ javac CLL.java
+
 $ javac DLL.java
+
 $ javac Node.java
+
 $ java Node
+
 Number of nodes: 5
-Enter data for nodes:
+Enter data for nodes :
 Gaurav
 Bhai Don
 Ramya
@@ -65,7 +70,8 @@ Aashu Da
 4.Exit
 
 Enter the option for type of Linked List to display: 1
-Displaying Singly Linked List: Gaurav->Bhai Don->Ramya->22Kar->Aashu Da->X
+Displaying Singly Linked List:
+Gaurav->Bhai Don->Ramya->22Kar->Aashu Da->X
 
 1.Display Singly Linked List
 2.Display Doubly Linked List
@@ -73,14 +79,18 @@ Displaying Singly Linked List: Gaurav->Bhai Don->Ramya->22Kar->Aashu Da->X
 4.Exit
 
 Enter the option for type of Linked List to display: 2
-Displaying Doubly Linked List: X<-Gaurav-><-Bhai Don-><-Ramya-><-22Kar-><-Aashu Da->X
+Displaying Doubly Linked List:
+X<-Gaurav-><-Bhai Don-><-Ramya-><-22Kar-><-Aashu Da->X
+
 1.Display Singly Linked List
 2.Display Doubly Linked List
 3.Display Circular Linked List
 4.Exit
 
 Enter the option for type of Linked List to display: 3
-Displaying Circular Linked List: Aashu Da<-Gaurav-><-Bhai Don-><-Ramya-><-22Kar-><-Aashu Da->Gaurav
+Displaying Circular Linked List:
+Aashu Da<-Gaurav-><-Bhai Don-><-Ramya-><-22Kar-><-Aashu Da->Gaurav
+
 1.Display Singly Linked List
 2.Display Doubly Linked List
 3.Display Circular Linked List
