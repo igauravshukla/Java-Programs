@@ -13,23 +13,27 @@ class Staff
 	int id;
 	String name;
 	double salary;
+
 	Staff(int i,String n,double sal)
 	{
-		id=i;
-		name=n;
-		salary=sal;
+		id = i;
+		name = n;
+		salary = sal;
 	}
 }
+
 class TeachingStaff extends Staff
 {
 	String sub[];
 	int experience;
+
 	TeachingStaff(int id,String nm,double sal,String sub[],int e) throws IOException
 	{
 		super(id,nm,sal);
-		this.sub=sub;
-		experience=e;
+		this.sub = sub;
+		experience = e;
 	}
+
 	void disp()
 	{
 		System.out.println("\nID : "+id);
@@ -45,12 +49,14 @@ class TeachingStaff extends Staff
 class NonTeachingStaff extends Staff
 {
 	String dept,shift;
+
 	NonTeachingStaff(int i,String n,double sal,String d,String sh)
 	{
 		super(i,n,sal);
-		dept=d;
-		shift=sh;
+		dept = d;
+		shift = sh;
 	}
+
 	void disp()
 	{
 		System.out.print("\nID : "+id);
@@ -68,32 +74,32 @@ class Main4
 		int ch,nots,nonts,i;
 		do
 		{
-			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("\n1:Teaching Staffs\n2:Non-Teaching Staffs\n3:No More Staffs:\n");
 			System.out.print("Enter your choice: ");
-			ch=Integer.parseInt(br.readLine());
+			ch = Integer.parseInt(br.readLine());
 			switch(ch)
 			{
 				case 1:	System.out.print("Number of Staffs: ");
-						nots=Integer.parseInt(br.readLine());
-						TeachingStaff ts[]=new TeachingStaff[nots];
+						nots = Integer.parseInt(br.readLine());
+						TeachingStaff ts[] = new TeachingStaff[nots];
 						for(i=0;i<nots;i++)
 						{
 							System.out.print("\nEnter ID: ");
-							int id=Integer.parseInt(br.readLine());
+							int id = Integer.parseInt(br.readLine());
 							System.out.print("Enter Name: ");
-							String name=br.readLine();
+							String name = br.readLine();
 							System.out.print("Enter Salary: ");
-							double sal=Double.parseDouble(br.readLine());
+							double sal = Double.parseDouble(br.readLine());
 							System.out.print("Enter the number of subjects: ");
-							int nos=Integer.parseInt(br.readLine());
-							String sub[]=new String[nos];
+							int nos = Integer.parseInt(br.readLine());
+							String sub[] = new String[nos];
 							System.out.println("Please enter the subjects:");
 							for(int j=0;j<nos;j++)
-								sub[j]=br.readLine();
+								sub[j] = br.readLine();
 							System.out.print("Enter experience: ");
-							int e=Integer.parseInt(br.readLine());
-							ts[i]=new TeachingStaff(id,name,sal,sub,e);
+							int e = Integer.parseInt(br.readLine());
+							ts[i] = new TeachingStaff(id,name,sal,sub,e);
 						}
 						System.out.println("\nTeaching Staff Members are as follows:");
 						for(i=0;i<nots;i++)
@@ -103,21 +109,21 @@ class Main4
 						break;
 
 				case 2:	System.out.print("Number of Staffs: ");
-						nonts=Integer.parseInt(br.readLine());
-						NonTeachingStaff nts[]=new NonTeachingStaff[nonts];
+						nonts = Integer.parseInt(br.readLine());
+						NonTeachingStaff nts[] = new NonTeachingStaff[nonts];
 						for(i=0;i<nonts;i++)
 						{
 							System.out.print("\nEnter ID: ");
-							int id=Integer.parseInt(br.readLine());
+							int id = Integer.parseInt(br.readLine());
 							System.out.print("Enter Name: ");
-							String name=br.readLine();
+							String name = br.readLine();
 							System.out.print("Enter Salary: ");
-							double sal=Double.parseDouble(br.readLine());
+							double sal = Double.parseDouble(br.readLine());
 							System.out.print("Enter the Department Name: ");
-							String dept=br.readLine();
+							String dept = br.readLine();
 							System.out.print("Enter Shift: ");
-							String shif=br.readLine();
-							nts[i]=new NonTeachingStaff(id,name,sal,dept,shif);
+							String shif = br.readLine();
+							nts[i] = new NonTeachingStaff(id,name,sal,dept,shif);
 						}
 						System.out.println("\nNon-Teaching Staff Members are as follows:");
 						for(i=0;i<nonts;i++)
@@ -137,9 +143,10 @@ class Main4
 	}
 }
 
-/*output
+/*
 
 $ javac Main4.java
+
 $ java Main4
 
 1:Teaching Staffs
