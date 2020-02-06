@@ -5,11 +5,13 @@ Define a class Employee having private members – id, name, department, salary. D
 */
 
 import java.io.*;
+
 class Employee
 {
 	private int id;
 	private String name,dept;
 	private double sal;
+
 	Employee()
 	{}
 
@@ -21,19 +23,6 @@ class Employee
 		this.sal = sal;
 	}
 
-/*	void accept() throws IOException
-	{
-		System.out.println("\nPlease enter the details:");
-		System.out.print("ID : ");
-		id = Integer.parseInt(br.readLine());
-		System.out.print("Name : ");
-		name = br.readLine();
-		System.out.print("Department : ");
-		dept = br.readLine();
-		System.out.print("Salary : ");
-		sal = Double.parseDouble(br.readLine());
-	}
-*/
 	double getSal()
 	{
 		return sal;
@@ -51,6 +40,7 @@ class Employee
 class Manager extends Employee
 {
 	double bonus;
+
 	Manager()
 	{
 		this.bonus = 0.00;
@@ -68,7 +58,7 @@ class Manager extends Employee
 		System.out.println("Bonus of Manager : "+bonus);
 	}
 
-	static Manager totsal(Manager []m,int n)
+	static Manager totsal(Manager []m, int n)
 	{
 		int i;
 		Manager temp = m[0];
