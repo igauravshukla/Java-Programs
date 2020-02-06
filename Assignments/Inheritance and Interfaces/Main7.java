@@ -10,55 +10,58 @@ import java.util.*;
 
 interface QueueOperations
 {
-    public void in();
-    public void del();
+	public void in();
+	public void del();
 }
 
 class MyQueue implements QueueOperations
 {
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    Scanner sc = new Scanner(System.in);
-    int n;
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	Scanner sc = new Scanner(System.in);
+	int n;
 	int front = 0;
 	int rear = -1;
 	int a[];
-    MyQueue(int n)
-    {
-        this.n=n;
+
+	MyQueue(int n)
+	{
+		this.n = n;
 		a = new int[n];
+	}
+
+	public void in()
+	{
+		if(rear == n-1)
+			System.out.print("Overflow");
+		else
+		{
+			System.out.print("Enter the number to add: ");
+			int no = sc.nextInt();
+			rear++;
+			a[rear] = no;
+		}
     }
-    public void in()
-    {
-        if(rear==n-1)
-            System.out.print("Overflow");
-        else
-        {
-            System.out.print("Enter the number to add: ");
-            int no = sc.nextInt();
-	       rear++;
-            a[rear] = no;
-        }
-    }
-    public void del()
-    {
-        if(front==rear+1)
-            System.out.print("Underflow");
-        else
-        {
-            System.out.println("Deleted element: "+a[front]);
-            front++;
+
+	public void del()
+	{
+		if(front == rear+1)
+			System.out.print("Underflow");
+		else
+		{
+			System.out.println("Deleted element: "+a[front]);
+			front++;
         }
     }
 }
 
 public class Main7
 {
-    public static void main(String args[]) throws IOException
-    {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("\nEnter the array size: ");
-        int n = Integer.parseInt(br.readLine());
-        MyQueue q = new MyQueue(n);
+	public static void main(String args[]) throws IOException
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print("\nEnter the array size: ");
+		int n = Integer.parseInt(br.readLine());
+		MyQueue q = new MyQueue(n);
 		int ch;
 		do
 		{
@@ -79,11 +82,12 @@ public class Main7
 		}while(ch!=3);
 	}
 }
+
 /*
 
+$ javac Main7.java
 
-$ javac main6.java
-$ java main6
+$ java Main7
 
 Enter the array size: 5
 
@@ -135,6 +139,7 @@ Deleted element: 12
 3.Exit
 Enter your choice: 2
 Underflow
+
 ***MENU***
 1.Insert
 2.Delete
