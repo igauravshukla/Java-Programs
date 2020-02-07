@@ -5,14 +5,17 @@ Define an abstract class “Staff” with members name and address. Define two sub-c
 */
 
 import java.util.*;
+
 abstract class Staff
 {
 	String name,addr;
+
 	Staff(String n,String a)
 	{
-		name=n;
-		addr=a;
+		name = n;
+		addr = a;
 	}
+
 	abstract void disp();
 }
 
@@ -20,12 +23,14 @@ class FullTimeStaff extends Staff
 {
 	String dept;
 	double sal;
+
 	FullTimeStaff(String n,String a,String d,double s)
 	{
 		super(n,a);
-		dept=d;
-		sal=s;
+		dept = d;
+		sal = s;
 	}
+
 	void disp()
 	{
 		System.out.println("\nName : "+name+"\n"+"Address : "+addr+"\n"+"Salary : "+sal);
@@ -36,12 +41,14 @@ class PartTimeStaff extends Staff
 {
 	int hr;
 	double rate;
+
 	PartTimeStaff(String n,String a,int h,double r)
 	{
 		super(n,a);
-		hr=h;
-		rate=r;
+		hr = h;
+		rate = r;
 	}
+
 	void disp()
 	{
 		System.out.println("\nName : "+name+"\n"+"Address : "+addr+"\n"+"Hours worked : "+hr+"\n"+"Rate : "+rate);
@@ -52,11 +59,12 @@ class Main11
 {
 	public static void main(String args[])
 	{
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		String n,d,a;
 		double s,r;
 		int h,n1;
 		String type;
+
 		System.out.print("\nHow many members : ");
 		n1 = sc.nextInt();
 		Staff s1[] = new Staff[n1];
@@ -106,7 +114,7 @@ Enter Salary  : 23000
 
 Enter name : Tushar
 Enter addr : Talegaon
-Enter type(F-FullTime P-PartTime) : P
+Enter type(F-FullTime P-PartTime) : p
 Enter no.of hrs : 20
 Enter rate : 340
 
