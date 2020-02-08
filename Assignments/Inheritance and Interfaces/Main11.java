@@ -76,7 +76,7 @@ class Main11
 			a = sc.next();
 			System.out.print("Enter type(F-FullTime P-PartTime) : ");
 			type = sc.next();
-			if(type.equalsIgnoreCase("F"))
+			if(type.equals("F"))
 			{
 				System.out.print("Enter dept : ");
 				d = sc.next();
@@ -114,7 +114,7 @@ Enter Salary  : 23000
 
 Enter name : Tushar
 Enter addr : Talegaon
-Enter type(F-FullTime P-PartTime) : p
+Enter type(F-FullTime P-PartTime) : P
 Enter no.of hrs : 20
 Enter rate : 340
 
