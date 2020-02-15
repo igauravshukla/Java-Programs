@@ -4,7 +4,6 @@ Write a program for matrix addition. The addition function should return the add
 
 */
 
-import java.io.*;
 import java.util.Scanner;
 
 class Matrix
@@ -18,32 +17,32 @@ class Matrix
 	}
 	int[][] matrixInput()
 	{
-		Scanner sc=new Scanner(System.in);
-		int m[][]=new int [r][c];
-		a1=new int[r][c];
+		Scanner sc = new Scanner(System.in);
+		int m[][] = new int [r][c];
+		a1 = new int[r][c];
 		System.out.println("Enter "+r*c+" elements of 1st array:");
 		for(i=0;i<r;i++)
 		{
 			for(j=0;j<c;j++)
 			{
-				a1[i][j]=sc.nextInt();
+				a1[i][j] = sc.nextInt();
 				
 			}
 		}
-		a2=new int[r][c];
+		a2 = new int[r][c];
 		System.out.println("Enter "+r*c+" elements of 2nd array:");
 		for(i=0;i<r;i++)
 		{
 			for(j=0;j<c;j++)
 			{
-				a2[i][j]=sc.nextInt();
+				a2[i][j] = sc.nextInt();
 			}
 		}
 		for(i=0;i<r;i++)
 		{
 			for(j=0;j<c;j++)
 			{
-				m[i][j]=a1[i][j]+a2[i][j];
+				m[i][j] = a1[i][j] + a2[i][j];
 			}
 			
 		}	
@@ -53,14 +52,14 @@ class Matrix
 	public static void main(String args[])
 	{	
 		int r,c;
-		Scanner sc=new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the no of rows of 1st and 2nd  matrix: ");
-		r=sc.nextInt();
+		r = sc.nextInt();
 		System.out.print("Enter the no of columns of 1st and 2nd matrix: ");
-		c=sc.nextInt();
-		int a3[][]=new int[r][c];
-		Matrix n=new Matrix(r,c);
-		a3=n.matrixInput();
+		c = sc.nextInt();
+		int a3[][] = new int[r][c];
+		Matrix n = new Matrix(r,c);
+		a3 = n.matrixInput();
 		for(int i=0;i<r;i++)
 		{
 			for(int j=0;j<c;j++)
@@ -72,9 +71,10 @@ class Matrix
 	}
 }
 
-/*output
+/*
 
 $ javac Matrix.java
+
 $ java Matrix
 Enter the no of rows of 1st and 2nd  matrix: 3
 Enter the no of columns of 1st and 2nd matrix: 3
