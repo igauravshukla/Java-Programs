@@ -8,17 +8,17 @@ display the object count after each object is created. (Use static member and me
 import java.io.*;
 import java.util.*;
 
-class stud
+class Student
 {
 	static int count;
 	int rno;
 	String nm;
 	float perc;
+
+	Student()
+	{}
 	
-	stud(){
-	}
-	
-	stud(int r, String n, float p)
+	Student(int r, String n, float p)
 	{
 		rno = r;
 		nm = n;
@@ -29,9 +29,9 @@ class stud
 	
 	void display()
 	{
-		System.out.println("\nRoll No :- "+rno);
-		System.out.println("Name :- "+nm);
-		System.out.println("Percentage :- "+perc+"\n");
+		System.out.println("\nRoll No : "+rno);
+		System.out.println("Name : "+nm);
+		System.out.println("Percentage : "+perc+"\n");
 	}
 	
 	public static void sortStud(stud s[],int n1)
@@ -43,31 +43,30 @@ class stud
 			{
 				if(s[i].perc > s[j].perc)
 				{
-					temp =s[i];
+					temp = s[i];
 					s[i] = s[j];
 					s[j] = temp;
 				}
 			}
 		}
-		System.out.println("After sorting stud percentage are :- ");
+		System.out.println("After sorting Student's percentage are : ");
 	}
 	
 	public static void main(String[] args)
 	{
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter the number of students:-");
-	int n = sc.nextInt();
-	stud[] s=new stud[n];
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number of students : ");
+		int n = sc.nextInt();
+		Student[] s = new Student[n];
 		for(int i=0 ; i<n ; i++)
 		{
-			System.out.print("Enter The roll-no :- ");
+			System.out.print("\nEnter The roll-no : ");
 			int r1 = sc.nextInt();
-			System.out.print("Enter The name :- ");
+			System.out.print("Enter The name : ");
 			String n1 = sc.next();
-			System.out.print("Enter The percentage :- ");
+			System.out.print("Enter The percentage : ");
 			float p1 = sc.nextFloat();
-	
-			s[i] = new stud(r1,n1,p1);
+			s[i] = new Student(r1,n1,p1);
 			System.out.println("");
 		}
 		sortStud(s,n);
@@ -78,13 +77,14 @@ class stud
 	}
 }
 
-/*output
+/*
 
-$ javac stud.java
-$ java stud
+$ javac Student.java
 
-Enter the number of students:-
-3
+$ java Student
+
+Enter the number of students : 3
+
 Enter The roll-no :- 1
 Enter The name :- BhaiDon
 Enter The percentage :- 70
@@ -100,20 +100,20 @@ Enter The name :- Aashu
 Enter The percentage :- 60
 Total Number of students are :- 3
 
-After sorting stud percentage are :- 
+After sorting stud percentage are :
 
-Roll No :- 2
-Name :- 22Kar
-Percentage :- 60.0
-
-
-Roll No :- 3
-Name :- Aashu
-Percentage :- 60.0
+Roll No : 2
+Name : 22Kar
+Percentage : 60.0
 
 
-Roll No :- 1
-Name :- BhaiDon
-Percentage :- 70.0
+Roll No : 3
+Name : Aashu
+Percentage : 60.0
+
+
+Roll No : 1
+Name : BhaiDon
+Percentage : 70.0
 
 */
