@@ -43,10 +43,11 @@ class MyMaths
 	}
 }
 
-/*output
+/*
 
-[cafy24@chb93 SET B]$ javac MyMaths.java
-[cafy24@chb93 SET B]$ java MyMaths 3 4
+$ javac MyMaths.java
+
+$ java MyMaths 3 4
 Addition = 7
 Subtraction = -1
 Multiplication = 12
