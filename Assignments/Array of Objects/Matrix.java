@@ -1,7 +1,6 @@
 /*
 
-Write a program for matrix addition. The addition function should return the addition
-of the matrix.
+Write a program for matrix addition. The addition function should return the addition of the matrix.
 
 */
 
