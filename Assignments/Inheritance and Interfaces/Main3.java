@@ -181,8 +181,8 @@ class Main3
 
 /*output
 
-$ javac main3.java
-$ java main3
+$ javac Main3.java
+$ java Main3
 
 1.MCA Student
 2.MCS Student
