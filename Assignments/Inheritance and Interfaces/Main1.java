@@ -1,6 +1,5 @@
 /*
 
-
 Define a class Vehicle (company,price). Define a parameterized constructor for it. Define subclasses of this class -- Transport (validity_no, period) and -- Private (owner_name, owner_address). Define appropriate constructors. Create n objects which could be of either Transport or Private class by asking the user‘s choice. Display details of all -- Private objects and all -- Transport objects. 
 
 */
@@ -121,8 +120,8 @@ class Main1
 
 /*output
 
-$ javac main1.java
-$ java main1
+$ javac Main1.java
+$ java Main1
 
 1.Transport Vehicle
 2.Private Vehicle
