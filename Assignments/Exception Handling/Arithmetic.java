@@ -41,31 +41,38 @@ class Arithmetic
 		char ch = args[1].charAt(0);
 		int b = Integer.parseInt(args[2]);
 		int result;
+		
 		switch(ch)
 		{
 			case '+':	result = a + b;
 					System.out.println("Result = "+result);
 					break;
+
 			case '-':	result = a - b;
 					System.out.println("Result = "+result);
 					break;
+
 			case '*':	result = a * b;
 					System.out.println("Result = "+result);
 					break;
+
 			case '/':	result = a / b;
 					System.out.println("Result = "+result);
 					break;
+
 			case '%':	result = a % b;
 					System.out.println("Result = "+result);
 					break;
+
 			default:	throw new InvalidOperatorException("Invalid Operator\n");
 		}
+
 		if(result<0)
 			throw new NegativeResultException("Negative Result\n");
 	}
 }
 
-/*output
+/*
 
 $ javac Arithmetic.java
 
