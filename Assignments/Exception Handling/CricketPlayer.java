@@ -19,6 +19,7 @@ public class CricketPlayer
 	String name;
 	int inn,no,total_runs;
 	float bat_avg;
+
 	CricketPlayer(String name,int inn,int no,int total_runs)
 	{
 		this.inn = inn;
@@ -29,14 +30,14 @@ public class CricketPlayer
 
 	public static void avg(CricketPlayer c) throws InvalidEntry
 	{
-			if(c.inn < c.no)
-			{
-				throw new InvalidEntry("No. of innings played can't be less than No. of times player is not-out");
-			}
-			else if((c.inn-c.no) == 0)
-				c.bat_avg = 0.0f;
-			else
-				c.bat_avg = c.total_runs/(c.inn-c.no);
+		if(c.inn < c.no)
+		{
+			throw new InvalidEntry("No. of innings played can't be less than No. of times player is not-out");
+		}
+		else if((c.inn-c.no) == 0)
+			c.bat_avg = 0.0f;
+		else
+			c.bat_avg = c.total_runs/(c.inn-c.no);
 	}
 
 	public static void sort(int n,CricketPlayer c[])
@@ -101,12 +102,13 @@ public class CricketPlayer
 	}
 }
 
-/*output
+/*
 
-$ CricketPlayer.java
+$ javac CricketPlayer.java
+
 $ java CricketPlayer
 
-Enter the number of batsman : 3
+Enter the number of batsman : 4
 
 Enter the name : Sachin
 Enter the number of innings played by batsman : 452
@@ -126,6 +128,12 @@ Number of times the batsman is not-out : 84
 Enter the runs scored by batsman : 10773
 Batting average = 50.0
 
+Enter the name : Gaurav
+Enter the number of innings played by batsman : 34
+Number of times the batsman is not-out : 34
+Enter the runs scored by batsman : 1234
+Batting average = 0.0
+
 Details of players are as follows :-
 
 Name = Dhoni
@@ -140,11 +148,17 @@ Number of times player remains not our = 41
 Number of runs scored = 18426
 Batting average = 44.0
 
-Details of players are as follows :-Name = Sehwag
+Name = Sehwag
 Number of innings played = 245
 Number of times player remains not our = 9
 Number of runs scored = 8273
 Batting average = 35.0
+
+Name = Gaurav
+Number of innings played = 34
+Number of times player remains not out = 34
+Number of runs scored = 1234
+Batting average = 0.0
 
 $ java CricketPlayer
 
