@@ -1,6 +1,9 @@
 /*
 
-Create a class Doctor with attributes id, name, age and department. Initialize values through parameterized constructor. If age of Doctor is not in between 25 and 65 then generate user-defined exception “AgeNotWithinRangeException”. If name contains numbers or special symbols raise exception “NameNotValidException”. Define the two exception classes. 
+Write a program which accept two integers and an arithmetic operator from the command line and performs the operation. Fire the following user defined exceptions: 
+a. If the no of arguments are less than 3 then fire “IllegalNumberOfArguments” 
+b. If the operator is not an Arithmetic operator, throw “InvalidOperatorException”. 
+c. If result is –ve, then throw “NegativeResultException” 
 
 */
 
