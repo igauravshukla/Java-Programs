@@ -11,6 +11,7 @@ class AgeNotWithinRangeException extends Exception
 		System.out.print(str);
 	}
 }
+
 class NameNotValidException extends Exception
 {
 	NameNotValidException(String str)
@@ -18,10 +19,12 @@ class NameNotValidException extends Exception
 		System.out.print(str);
 	}
 }
+
 public class Doctor
 {
 	int id,age;
 	String name,dept;
+
 	Doctor(int id,String name,int age,String dept)
 	{
 		this.id = id;
@@ -29,30 +32,35 @@ public class Doctor
 		this.age = age;
 		this.dept = dept;
 	}
+
 	void display()
 	{
-		System.out.println("ID = "+id);
+		System.out.println("\nID = "+id);
 		System.out.println("Name = "+name);
 		System.out.println("Age = "+age);
 		System.out.println("Department = "+dept);
 	}
+
 	public static void main(String args[])
 	{
 		try
 		{
 			int id = Integer.parseInt(args[0]);
 			String name = args[1];
+
 			if(!(name.matches("^[a-zA-Z]*$")))
 			{
 				NameNotValidException n = new NameNotValidException("Name is not Valid\n");
 				throw n;
 			}
+
 			int age = Integer.parseInt(args[2]);
 			if(age < 25 || age > 65)
 			{
 				AgeNotWithinRangeException n = new AgeNotWithinRangeException("Age is not Valid\n");
 				throw n;
 			}
+
 			String dept = args[3];
 			Doctor d = new Doctor(id,name,age,dept);
 			d.display();
@@ -69,6 +77,7 @@ public class Doctor
 $ javac Doctor.java
 
 $ java Doctor 1 Gaurav 56 Physiotherapy
+
 ID = 1
 Name = Gaurav
 Age = 56
