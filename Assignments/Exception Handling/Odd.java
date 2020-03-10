@@ -14,7 +14,7 @@ public class Odd
 		assert a>0 : "1st number is zero or negative\n";
 		assert b>0 : "2nd number is zero or negative\n";
 		assert b>a : "2nd number is greater than 1st number\n";
-		System.out.print("The odd numbers between "+a+" and "+b+" are as follows: ");
+		System.out.print("\nThe odd numbers between "+a+" and "+b+" are as follows: ");
 		if(a%2==0)
 			a++;
 		for(int i=a;i<=b;i+=2)
@@ -23,7 +23,7 @@ public class Odd
 	}
 }
 
-/*output
+/*
 
 $ javac Odd.java
 
