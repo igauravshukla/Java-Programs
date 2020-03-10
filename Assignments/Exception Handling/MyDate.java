@@ -19,6 +19,7 @@ class DateException extends Exception
 class MyDate
 {
 	int dd,mm,yy;
+
 	void accept()
 	{
 		Scanner sc = new Scanner(System.in);
@@ -73,7 +74,7 @@ class MyDate
 	}
 }
 
-/*output
+/*
 
 $ javac MyDate.java
 $ java MyDate
