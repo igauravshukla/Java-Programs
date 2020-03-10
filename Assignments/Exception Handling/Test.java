@@ -47,6 +47,7 @@ class Test
 		}
 	}
 }
+
 /*
 
 $ javac Test.java
